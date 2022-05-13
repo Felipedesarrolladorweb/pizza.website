@@ -1,0 +1,661 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+html {
+  font-size: 62.5%;
+  text-decoration: none;
+  list-style: none;
+  scroll-behavior: smooth;
+  font-family: "Roboto";
+  background-color: #000000;
+}
+
+a {
+  list-style: none;
+  text-decoration: none;
+  color: white;
+}
+header {
+  position: fixed;
+  background-color: rgba(49, 51, 50, 43%);
+  min-width: 100vw;
+  min-height: 5vh;
+  z-index: 1;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  display: flex;
+  background-color: #e63d46;
+  min-height: 7rem;
+  width: 17rem;
+  flex-direction: row;
+  font-family: "Roboto", sans-serif;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+.logo img {
+  width: 6rem;
+}
+.nav-links {
+  display: none;
+}
+/* Burger thing */
+.burger {
+  position: relative;
+  display: block;
+  cursor: pointer;
+  margin-top: 1rem;
+  margin-right: 2vmin;
+}
+.burger span {
+  padding: 0.2rem 2rem;
+  background: white;
+  margin: 0.5rem 0rem;
+  display: block;
+  transition: all 0.5s ease;
+}
+
+.nav-links1 li {
+  margin-bottom: 4rem;
+}
+.nav-links1 a {
+  color: white;
+  font-size: 2rem;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+}
+
+.nav-links1 {
+  background: #b12930;
+  position: fixed;
+  width: 50%;
+  height: 100%;
+  top: 0;
+  left: 100%;
+  flex-direction: column;
+  transition: transform 1s ease;
+  padding-top: 14rem;
+  text-align: center;
+}
+.nav-links1 button {
+  margin-top: 2.3rem;
+  width: 17rem;
+  height: 4.2rem;
+  background-color: #494141;
+  border: white solid 1px;
+  border-radius: 4px;
+  color: white;
+  cursor: pointer;
+}
+.nav-open {
+  transform: translateX(-100%);
+}
+.toggle .line1 {
+  transform: rotateZ(45deg) translateY(300%);
+  background: white;
+  position: fixed;
+}
+.toggle .line2 {
+  opacity: 0;
+}
+.toggle .line3 {
+  transform: rotateZ(-45deg) translateY(-300%);
+  background: white;
+  position: fixed;
+}
+.main-section {
+  min-height: 100vh;
+  background-image: url(/src/pizzamaindesktop.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-section h1 {
+  color: #ffffff;
+  font-size: 2.9rem;
+  text-align: center;
+}
+.main-section p {
+  font-size: 1.4rem;
+  color: rgb(255, 255, 255, 0.9);
+}
+.main-section button {
+  background-color: #e63d46;
+  border-style: none;
+  width: 10rem;
+  height: 2rem;
+  font-size: 1.2rem;
+  border-radius: 0.2rem;
+}
+.quienessomos-section {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.quienessomos-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: start;
+  width: 70vw;
+  margin: 0% auto;
+  color: #ffffff;
+  justify-self: flex-start;
+}
+.quienessomos-title h1 {
+  font-size: 2em;
+}
+.quienessomos-title p {
+  font-size: 1.2rem;
+  margin-top: 1rem;
+}
+.p1 {
+  color: #e63d46;
+  font-weight: bold;
+  margin: 0;
+}
+.quienessomos-title button {
+  background-color: #e63d46;
+  border-style: none;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 0.3rem;
+  margin-top: 1rem;
+}
+.quienessomos-img img {
+  width: 70vw;
+  margin: 4rem auto 0;
+  border-radius: 1rem;
+}
+.menu-section {
+  min-width: 100vw;
+  min-height: 50vh;
+  display: flex;
+  flex-direction: row;
+}
+.menu-img {
+  display: none;
+}
+.menupizza {
+  min-width: 70vw;
+  margin: 0% auto;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+.menupizza h1 {
+  margin-bottom: 7rem;
+  font-size: 2rem;
+}
+.menucards {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-content: space-around;
+  margin-bottom: 7rem;
+}
+.reviews {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/src/pizzareseñadesktopbackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.reviews h1 {
+  margin: 7rem 0;
+  color: white;
+  font-size: 2.4rem;
+  text-align: center;
+}
+.reviewtext {
+  margin: 2rem 0 4rem 0;
+  width: 50vmin;
+}
+.reviews .review1 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  color: white;
+  width: 70vw;
+}
+.reviews .review2 {
+  display: flex;
+  flex-direction: row-reverse;
+  color: white;
+  flex-wrap: wrap;
+  width: 70vw;
+}
+.eventosblog-section {
+  background-image: url("/src/pizzaeventosdesktopbackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  min-width: 100vw;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.eventostitle {
+  font-size: 2.9rem;
+  color: #ffffff;
+  text-align: center;
+  margin: 4rem 0 4rem;
+}
+.blog1,
+.blog2,
+.blog3 {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100vw;
+  justify-content: space-evenly;
+  align-content: space-around;
+}
+.blog2 {
+  flex-direction: row-reverse;
+}
+.blogtext {
+  color: #ffffff;
+  width: 50rem;
+  height: 17rem;
+  margin: 2rem 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: flex-start;
+}
+.blogtext h1 {
+  font-size: 2.4rem;
+}
+.blogtext button {
+  background-color: #e63d46;
+  color: white;
+  width: 9rem;
+  height: 2rem;
+  border-radius: 0.4rem;
+  border-style: none;
+}
+.blogimg {
+  display: flex;
+  width: 77vw;
+  height: 37rem;
+}
+.blogimg img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.icons {
+  min-width: 100vw;
+  min-height: 24vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  background-image: url("/src/pizzalogodesktopbackground.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.icon1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  text-align: center;
+}
+.icon1 p {
+  color: #ffffff;
+  width: 57%;
+}
+.icon1 p.iconr {
+  color: #e63d46;
+  font-weight: bold;
+}
+.icon1 img {
+  width: 50%;
+  border: #494141 solid 2px;
+}
+footer {
+  min-width: 100vw;
+  min-height: 40vh;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+footer h2 {
+  font-size: 1.7rem;
+}
+footer p {
+  font-size: 1.2rem;
+}
+.footer1 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  margin-bottom: 4rem;
+  width: 49vw;
+}
+.footer2 {
+  width: 47vw;
+  display: flex;
+  flex-direction: column;
+  height: 21.7rem;
+}
+.contactotexto {
+  height: 15rem;
+  display: flex;
+  width: 20rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.contactotexto p {
+  width: 17rem;
+}
+.horario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 11rem;
+  margin-left: 4vmin;
+}
+.comentario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 14rem;
+  width: 29rem;
+}
+.comentario textarea {
+  background-color: #494141;
+  border-style: none;
+  width: 29rem;
+}
+.correo1 input {
+  background-color: #494141;
+  border-style: none;
+  margin-bottom: 1rem;
+  width: 10rem;
+  height: 2rem;
+}
+.correo1 button {
+  background-color: #e63d46;
+  border-style: none;
+  width: 7rem;
+  height: 2rem;
+  color: #ffffff;
+  border-radius: 0.2rem;
+}
+.correo p span::after{
+  content: none;
+  white-space: none;
+}
+.horario h2 {
+  font-size: 1.7rem;
+}
+.redesociales img {
+  width: 3rem;
+}
+.correo {
+  margin-left: 4vmin;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 7rem;
+  display: flex;
+}
+
+footer p.copyright {
+  position: absolute;
+  margin-top: 24rem;
+  font-size: 1.7rem;
+}
+p.copyright a {
+  font-weight: bold;
+}
+p.copyright a:hover {
+  text-decoration: underline;
+}
+@media screen and (min-width: 279px) {
+  .correo p span::after{
+      content: "\a";
+      white-space: pre;
+  }
+  .contactotexto p {
+    width: 14rem;
+  }
+  .correo1 input {
+    width: 7rem;
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 360px) {
+  .correo p span::after{
+      content: none;
+      white-space: pre;
+  }
+  .contactotexto p {
+    width: 14rem;
+  }
+  .correo1 input {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 410px) {
+  .correo1 input {
+    width: 31vmin;
+  }
+}
+@media screen and (min-width: 900px) {
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 54vw;
+  }
+  .nav-links a {
+    font-size: 1.4rem;
+    color: rgb(255, 255, 255, 0.9);
+  }
+  .nav-links a:hover {
+    text-decoration: underline;
+  }
+  .nav-links button {
+    background-color: #e63d46;
+    border-style: none;
+    width: 10rem;
+    height: 2.4rem;
+    border-radius: 0.4rem;
+  }
+  .burger {
+    display: none;
+  }
+  .main-section h1 {
+    font-size: 4rem;
+    color: rgb(255, 255, 255, 0.9);
+  }
+  .main-section p {
+    font-size: 2rem;
+  }
+  .main-section button {
+    font-size: 2rem;
+    font-weight: bold;
+    width: 14rem;
+    height: 3rem;
+    border-radius: 1rem;
+  }
+  .quienessomos-section {
+    flex-direction: row-reverse;
+  }
+  .quienessomos-title {
+    justify-content: center;
+    align-items: center;
+  }
+  .quienessomos-title h1 {
+    font-size: 4rem;
+  }
+  .quienessomos-title p {
+    font-size: 1.4rem;
+    font-weight: normal;
+  }
+  .quienessomos-title h1,
+  .quienessomos-title p {
+    width: 70%;
+  }
+  .quienessomos-title h1 {
+    font-size: 4.3rem;
+  }
+  .quienessomos-title p {
+    font-size: 1.7rem;
+  }
+  .quienessomos-img {
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    min-width: 40vw;
+  }
+  .quienessomos-img img {
+    width: 100%;
+  }
+  .menu-section {
+    display: flex;
+    flex-direction: row;
+    padding-left: 2rem;
+  }
+  .menu-section h1 {
+    font-size: 4rem;
+  }
+  .menucards p {
+    font-size: 2rem;
+    color: rgb(255, 255, 255, 0.9);
+  }
+  .menucards p.price {
+    color: #e63d46;
+  }
+  .menucards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "box1 box2 box3"
+      "box4 box5 box6";
+    gap: 2rem;
+  }
+  .menu-img {
+    display: flex;
+    z-index: -1;
+    margin-top: 10rem;
+    min-width: fit-content;
+    justify-self: end;
+    transform: translate(20%, 0%);
+  }
+  .menu-img img {
+    width: 70rem;
+    height: 70rem;
+  }
+
+  .cards1 {
+    grid-area: box1;
+  }
+  .cards2 {
+    grid-area: box2;
+  }
+  .cards3 {
+    grid-area: box3;
+  }
+  .cards4 {
+    grid-area: box4;
+  }
+  .cards5 {
+    grid-area: box5;
+  }
+  .cards6 {
+    grid-area: box6;
+  }
+  .review1 {
+    margin-bottom: 9rem;
+  }
+  .reviewtext {
+    padding: 0 4rem;
+  }
+  .reviews h1 {
+    font-size: 4rem;
+  }
+  .review1 img.img1,
+  .review2 img.img2 {
+    width: 50%;
+    height: 50%;
+  }
+  .blogimg {
+    width: 40vw;
+  }
+  .reviewtext h2 {
+    font-size: 3.4rem;
+  }
+  .reviewtext p {
+    font-size: 2rem;
+  }
+  .eventosblog-section h1 {
+    font-size: 3.7rem;
+  } 
+  .blog1 p,
+  .blog2 p,
+  .blog3 p {
+    font-size:1.7rem;
+  }
+  .icons .icon1 img  {
+    width: 10rem;
+  }
+  .icon1 p {
+    font-size: 1.7rem;
+  }
+  .footer1 h2,
+  .footer2 h2 {
+    font-size: 2.4rem;
+  }
+  .footer1 p,
+  .footer2 p {
+    font-size: 1.7rem;
+  }
+  footer p.copyright {
+    font-size: 2rem;
+  }
+  .contactotexto p {
+    width: 19rem;
+  }
+  .correo1 input {
+  width: 21rem;
+  }
+}
